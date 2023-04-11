@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
+
 [System.Serializable]
 public class MemberForm
 {
@@ -21,13 +22,11 @@ public class MemberForm
 
 public class ExampleManager : MonoBehaviour
 {
-    string URL = "https://script.google.com/macros/s/AKfycbw59VPTH0Tn65YyJeq0UoBQVHPduXTb87J0ANnEhgbgjq1SCVx9eRr3lW8_emDMerQ/exec";
+    string URL = "https://script.google.com/macros/s/AKfycbzUO8EkTbTm-vESBioS89cJVdACLDY1xaK197eBOtF7O8MiPMHSR0VLf1HCjhiYOVyL/exec";
 
     IEnumerator Start()
     {
-        // 요청을 하기 위한 작업
-        //UnityWebRequest request = UnityWebRequest.Get(URL);
-
+        // ** 요청을 하기위한 작업.
         MemberForm member = new MemberForm("변사또", 45);
 
         WWWForm form = new WWWForm();
@@ -39,7 +38,7 @@ public class ExampleManager : MonoBehaviour
         {
             yield return request.SendWebRequest();
 
-            // 응답에 대한 작업
+            // ** 응답에 대한 작업.
             print(request.downloadHandler.text);
         }
     }
