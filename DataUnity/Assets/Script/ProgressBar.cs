@@ -30,8 +30,12 @@ public class ProgressBar : MonoBehaviour
 
                 messagetext.gameObject.SetActive(true);
 
-                if(Input.GetMouseButtonDown(0))
+                if (Input.GetMouseButtonDown(0))
+                {
+                    Debug.Log("ÀüÈ¯");
                     asyncOperation.allowSceneActivation = true;
+
+                }
             }
         }
     }
