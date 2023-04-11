@@ -58,10 +58,10 @@ public class ExampleManager : MonoBehaviour
             MemberForm json = JsonUtility.FromJson<MemberForm>(request.downloadHandler.text);
 
             // 응답에 대한 작업
-            print(json.index);
-            print(json.name);
-            print(json.age);
-            print(json.gender);
+            //print(json.index);
+            //print(json.name);
+            //print(json.age);
+            //print(json.gender);
         }
     }
 

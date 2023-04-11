@@ -26,10 +26,10 @@ public class ProgressBar : MonoBehaviour
 
             if (asyncOperation.progress > 0.7f)
             {
-                yield return new WaitForSeconds(2.5f);
+                //yield return null;
+                //yield return new WaitForSeconds(0.5f);
 
                 messagetext.gameObject.SetActive(true);
-
                 if (Input.GetMouseButtonDown(0))
                 {
                     Debug.Log("ÀüÈ¯");
