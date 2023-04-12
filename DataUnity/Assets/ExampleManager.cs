@@ -30,12 +30,13 @@ public class ExampleManager : MonoBehaviour
 
     IEnumerator Start()
     {
-        /*
+        
         // ** 요청을 하기위한 작업.
-        MemberForm member = new MemberForm("변사또", 45);
+        MemberForm member = new MemberForm(5, "변사또", 45, 1);
         WWWForm form = new WWWForm();
-        form.AddField("Name", member.Name);
-        form.AddField("Age", member.Age);
+
+        form.AddField(nameof(name), member.name);
+        form.AddField("Age", member.age);
 
         using (UnityWebRequest request = UnityWebRequest.Post(URL, form))
         {
@@ -44,7 +45,9 @@ public class ExampleManager : MonoBehaviour
             // ** 응답에 대한 작업.
             print(request.downloadHandler.text);
         }
-         */
+         
+
+        
 
         using (UnityWebRequest request = UnityWebRequest.Get(URL))
         {
@@ -63,10 +66,5 @@ public class ExampleManager : MonoBehaviour
     public void NextScene()
     {
         SceneManager.LoadScene("progressScene");
-    }
-
-    public void NewUser()
-    {
-
     }
 }
