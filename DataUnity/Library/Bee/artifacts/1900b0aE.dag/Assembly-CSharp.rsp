@@ -375,6 +375,7 @@
 "Assets/ProgressBar.cs"
 "Assets/Script/Login.cs"
 "Assets/Script/Register.cs"
+"Assets/Script/UserDataManager.cs"
 "Assets/test.cs"
 -langversion:9.0
 

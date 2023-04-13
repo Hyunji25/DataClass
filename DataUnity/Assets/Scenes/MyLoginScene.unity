@@ -295,7 +295,6 @@ GameObject:
   - component: {fileID: 422319477}
   - component: {fileID: 422319476}
   - component: {fileID: 422319475}
-  - component: {fileID: 422319480}
   - component: {fileID: 422319479}
   m_Layer: 5
   m_Name: Canvas
@@ -398,21 +397,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 422319474}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c8a48eb6f67b154e96ff50804774f03, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IDInput: {fileID: 1333934343}
-  PassInput: {fileID: 1667620143}
---- !u!114 &422319480
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 422319474}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e68abc1d809e0b84eb50fdbc641d32a4, type: 3}
+  m_Script: {fileID: 11500000, guid: 3302ef8677b213d4ca5beb184f2dc55d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   IDInput: {fileID: 1333934343}
@@ -756,8 +741,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 422319479}
-        m_TargetAssemblyTypeName: Register, Assembly-CSharp
-        m_MethodName: OnClickRegisterButton
+        m_TargetAssemblyTypeName: UserDataManager, Assembly-CSharp
+        m_MethodName: Register
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1017,9 +1002,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 422319480}
-        m_TargetAssemblyTypeName: Login, Assembly-CSharp
-        m_MethodName: OnClickLoginButton
+      - m_Target: {fileID: 422319479}
+        m_TargetAssemblyTypeName: UserDataManager, Assembly-CSharp
+        m_MethodName: Login
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
