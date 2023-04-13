@@ -6,6 +6,7 @@ using UnityEngine.Networking;
 using Unity.VisualScripting;
 using UnityEditor.PackageManager.Requests;
 using UnityEngine.SceneManagement;
+using TinyJSON;
 
 public class UserData
 {
@@ -65,17 +66,24 @@ public class UserDataManager : MonoBehaviour
         using (UnityWebRequest www = UnityWebRequest.Post(url, form))
         {
             yield return www.SendWebRequest();
-            
+
             if (www.isDone)
-                print(www.downloadHandler.text);
+                Response(www.downloadHandler.text);
             else
                 print("Error");
             www.Dispose();
         }
     }
 
-    public void NextScene()
+    void Response(string json)
     {
-        SceneManager.LoadScene("progressScene");
+        if (string.IsNullOrEmpty(json)) return;
+
+        UD = JsonUtility.FromJson<UserData>(json);
+
+        print(UD.result);
+
+        if (UD.result == "로그인 성공")
+            SceneManager.LoadScene("progressScene");
     }
 }
