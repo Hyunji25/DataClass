@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Networking;
 using Unity.VisualScripting;
+using UnityEditor.PackageManager.Requests;
+using UnityEngine.SceneManagement;
 
 public class UserData
 {
@@ -63,12 +65,17 @@ public class UserDataManager : MonoBehaviour
         using (UnityWebRequest www = UnityWebRequest.Post(url, form))
         {
             yield return www.SendWebRequest();
-            /*
+            
             if (www.isDone)
                 print(www.downloadHandler.text);
             else
                 print("Error");
-            */
+            www.Dispose();
         }
+    }
+
+    public void NextScene()
+    {
+        SceneManager.LoadScene("progressScene");
     }
 }
