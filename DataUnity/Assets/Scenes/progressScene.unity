@@ -325,6 +325,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 1718259473}
   messagetext: {fileID: 1890579082}
+  Loading: {fileID: 1109269219}
 --- !u!1 &1109269216
 GameObject:
   m_ObjectHideFlags: 0
@@ -338,7 +339,7 @@ GameObject:
   - component: {fileID: 1109269219}
   - component: {fileID: 1109269218}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: color
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
